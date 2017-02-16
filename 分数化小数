@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main(void){
+	int denominator;
+	int numerator ;
+	int i;
+	printf("请输入一个分数；");
+	scanf("%d/%d",&numerator,&denominator );
+	printf("0.");
+	for(i=0;i<200;i++){
+		int decimals=(numerator*=10)/denominator;
+		numerator%=denominator; 
+		printf("%d",decimals);
+		if(numerator==0) break;
+		
+	}
+} 
